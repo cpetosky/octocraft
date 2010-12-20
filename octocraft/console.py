@@ -58,6 +58,7 @@ class LocalClient(minecraft.AdminClient):
     def _backup_handler(self):
         while self.running:
             time.sleep(self.backup_interval)
+            self.backup()
 
 if __name__ == '__main__':
     parser = optparse.OptionParser()
